@@ -294,9 +294,9 @@ Looks like BMP header contains a null at the 6th byte. Ok so we can't upload a B
 
 First lets make two BMPs that have no nulls, are the same size, and have recognizable patterns. Its really hard to see on this white page, but these are white squares with a not-quite-black (since black is `\x00` in a BMP) square on either the lower left or upper right.
 
-Bottom Left: ![Bottom Left](https://i.imgur.com/lC1iy4E.png "Bottom Left")
+Bottom Right: ![Bottom Left](https://i.imgur.com/lC1iy4E.png "Bottom Right")
 
-Top Right:  ![Bottom Left](https://i.imgur.com/ApjQYiA.png "Bottom Left")
+Top Left:  ![Bottom Left](https://i.imgur.com/ApjQYiA.png "Top Left")
 
 Now, we chop off the header, upload them to the challenge, save the result, slap the header back on and....
 
