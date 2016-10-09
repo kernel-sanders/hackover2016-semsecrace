@@ -1,0 +1,82 @@
+body, html {
+    margin:0;
+    padding:0;
+    background-color:rgb(0, 150, 0);
+    font-size:14px;
+    font-family:sans-serif;
+}
+
+canvas {
+    position:absolute;
+    z-index:1;
+}
+
+#drugstore, #game-over {
+    position:absolute;
+    text-align:center;
+    z-index:2;
+}
+
+#game-over {
+    display:none;
+}
+
+#drugstore form {
+    display:inline;
+    margin:0;
+    padding:0;
+}
+
+a.btn {
+    text-decoration:none;
+}
+
+.btn {
+    -moz-user-select:none;
+    border-radius:4px;
+    display:inline-block;
+    cursor:pointer;
+    font-size:14px;
+    line-height:1.43;
+    padding: 6px 12px;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    box-sizing:border-box;
+    border:1px solid transparent;
+    background-repeat:repeat-x;
+}
+
+.btn-blue {
+    background-image:linear-gradient(to bottom, #337ab7 0%, #265a88 100%);
+    border-color:#245580;
+    color:#fff;
+}
+
+.btn-red {
+    background-image: linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
+    border-color:#b92c28;
+    color:#fff;
+}
+
+.btn-white {
+    color:#000;
+    background-image: linear-gradient(to bottom, #fff 0%, #e0e0e0 100%);
+    border-color:#ccc;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.m0, .m1 {
+	border:1px solid;
+    color:#fff;
+}
+
+.m0 {
+    background-image: linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
+    border-color:#b92c28;
+}
+
+.m1 {
+    background-image:linear-gradient(to bottom, #337ab7 0%, #265a88 100%);
+    border-color:#245580;
+}

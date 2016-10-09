@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Semantic security race</title>
+<link rel="stylesheet" type="text/css" href="/static/semsecrace.min.css">
+<script type="application/javascript">
+var numStages = {{.NumStages}};
+var state = {
+    "stage": 0,
+    "color": "red",
+    "mode": "drive",
+    "animationInterval": null,
+    "images": null,
+    "license": "{{.DriverLicense}}"
+}
+</script>
+</head>
+<body>
+    <div id="container">
+        <canvas id="canvas" width="800" height="800"></canvas>
+        <div id="drugstore">
+            <form method="post" action="/ciphertext">
+                <input type="hidden" name="driver_license" value="{{.DriverLicense}}">
+                <p>Enter some messages:</p>
+                <p><input type="text" name="m0" class="m0" size="16"></p>
+                <p><input type="text" name="m1" class="m1" size="16"></p>
+                <button class="btn btn-white">Get ciphertext</button>
+            </form>
+            <p><strong>I choose ...</strong></p>
+            <p>
+                <form id="form-red">
+                    <button class="btn btn-red">Red</button>
+                </form>
+                <form id="form-blue">
+                    <button class="btn btn-blue">Blue</button>
+                </form>
+            </p>
+        </div>
+        <div id="game-over">
+            <p><strong id="game-over-text"></strong></p>
+            <p><strong>Game over.</strong></p>
+            <p>
+                <a class="btn btn-white" href="/">Resurrect driver</a>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/semsecrace.min.js"></script>
+</body>
+</html>
